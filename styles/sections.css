@@ -8,6 +8,7 @@
     border-radius: 4px;
     position: relative;
     overflow: hidden;
+    
 }
 
 .card::before {
@@ -27,6 +28,17 @@
     padding: 24px;
 }
 
+.card figcaption:has(.text-lg) {
+    padding: 12px;
+}
+
 .card figcaption h2 {
     margin-top: 8px;
+     /* adicionei as linhas abaixo */
+     display: -webkit-box;
+     -webkit-line-clamp: 3;
+     line-clamp: 3;
+     -webkit-box-orient: vertical;
+     overflow: hidden;
+     text-overflow: ellipsis;
 }
