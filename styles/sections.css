@@ -87,3 +87,23 @@ section header a:hover span {
     margin-top: 8px;
     font-weight: 800;
 }
+
+#ia div article div h3 {
+    /* adicionei as linhas abaixo */
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#ia div article div p {
+    /* adicionei as linhas abaixo */
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
