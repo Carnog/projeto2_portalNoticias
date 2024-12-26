@@ -1,17 +1,39 @@
+section header {
+    border-top: 1px solid var(--stroke-color);
+    padding-block: 12px 24px;
+    font: var(--text-span);
+}
+
+section header a {
+    justify-self: end;
+    align-items: center;
+    gap: 8px;
+}
+
+section header a span {
+    background-image: url(../assets/icons/ArrowRight.svg);
+    width: 16px;
+    height: 16px;
+}
+
+section header a:hover span {
+    background-image: url(../assets/icons/ArrowRight-hover.svg);
+}
+
 #featured img {
     height: 100%;
     object-fit: cover;
     border-radius: 4px;
 }
 
-.card {
+#featured .card {
     border-radius: 4px;
     position: relative;
     overflow: hidden;
-    
+
 }
 
-.card::before {
+#featured .card::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -21,24 +43,47 @@
             #020617 100%);
 }
 
-.card figcaption {
+#featured .card figcaption {
     position: absolute;
     bottom: 0;
 
     padding: 24px;
 }
 
-.card figcaption:has(.text-lg) {
+#featured .card figcaption:has(.text-lg) {
     padding: 12px;
 }
 
-.card figcaption h2 {
+#featured .card figcaption h2 {
     margin-top: 8px;
-     /* adicionei as linhas abaixo */
-     display: -webkit-box;
-     -webkit-line-clamp: 3;
-     line-clamp: 3;
-     -webkit-box-orient: vertical;
-     overflow: hidden;
-     text-overflow: ellipsis;
+    /* adicionei as linhas abaixo */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#weekly>div {
+    grid-template-columns: repeat(4, 292px);
+}
+
+#weekly img {
+    height: 160px;
+}
+
+#weekly figure {
+    position: relative;
+}
+
+#weekly figure .content-tag {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+#weekly figure p {
+    margin-top: 8px;
+    font-weight: 800;
 }
